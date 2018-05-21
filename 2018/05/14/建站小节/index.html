@@ -560,8 +560,8 @@
           
 
   
-    <div class="comments" id="comments">
-    </div>
+    <div id="gitalk-container"></div>
+
   
 
 
@@ -907,6 +907,21 @@
   </script>
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '2e70dd7201598f2f1965',
+          clientSecret: 'afa233a821b2f3ca5ddfd6303f58c913b826362c',
+          repo: 'HQ-Wang.github.io',
+          owner: 'HQ-Wang',
+          admin: ['HQ-Wang'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
