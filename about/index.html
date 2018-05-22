@@ -674,7 +674,8 @@
           repo: 'HQ-Wang.github.io',
           owner: 'HQ-Wang',
           admin: ['HQ-Wang'],
-          id: location.pathname,
+          //id: location.pathname,
+          id: '<%= page.date %>',
           distractionFreeMode: 'true'
         })
         gitalk.render('gitalk-container')           
