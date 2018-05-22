@@ -378,7 +378,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-22 21:35:06" itemprop="dateModified" datetime="2018-05-22T21:35:06+08:00">2018-05-22</time>
+                <time title="修改时间：2018-05-22 21:39:59" itemprop="dateModified" datetime="2018-05-22T21:39:59+08:00">2018-05-22</time>
               
             
           </span>
@@ -459,11 +459,11 @@
 <li>相较于不登录评论，我更倾向于登录评论，开这个博客主要是记录一些工作学习中的心得体会，很大程度上其实是写给自己看的，由于是Github账号，评论素质不会太差，可以免去一些不必要的麻烦。</li>
 <li>相较于Gitment，我更喜欢Gitalk的风格，感觉更加炫酷一些，当然这个喜好因人而异。</li>
 </ol>
-<p>##注意<br>这里选择Gitment或Gitalk评论系统时，极有可能出现一个坑<code>Error: Validation Failed</code> ，原因是：</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>这里选择Gitment或Gitalk评论系统时，极有可能出现一个大坑<code>Error: Validation Failed</code> ，原因是：</p>
 <blockquote>
 <p>文章名称经URL编码后添加到issues的label里，但是label的长度上限是50个字符，所以文章名有些长的都会生成label失败，也就没办法评论了。</p>
 </blockquote>
-<p>打开<code>themes\next\layout\_third-party\comments\gitment(gitalk).swig</code>，将<code>id: window.location.pathname(id: location.pathname)</code>改为<code>id: &#39;&lt;%= page.date %&gt;&#39;</code></p>
+<p>解决办法：打开<code>themes\next\layout\_third-party\comments\gitment(gitalk).swig</code>，将<code>id: window.location.pathname(id: location.pathname)</code>改为<code>id: &#39;&lt;%= page.date %&gt;&#39;</code></p>
 <h1 id="嵌入网易云音乐"><a href="#嵌入网易云音乐" class="headerlink" title="嵌入网易云音乐"></a>嵌入网易云音乐</h1><p>试用了一天后，感觉很吵，直接关掉了，哈哈哈。<br><del>具体方法可以参考教程，不过在得到外链后可以将链接直接复制到 <code>themes\next\layout\_custom</code> 文件夹下的<code>sidebar.swig</code>文件里，这个文件默认是个空文件，就是用来添加一些自定义的内容到侧边栏。同理，如果想把音乐放在博客头部，可以复制到<code>header.swig</code>文件里。</del></p>
 
           
