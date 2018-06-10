@@ -106,19 +106,23 @@
 
 
 
-  <meta name="description" content="Actor Framework (AF) is launched by National Instrument in 2012, which is designed for the Objective Oriented Programming (OOP) in Labview. It is powerful and especially suitable for building large p">
+  <meta name="description" content="想学习Labview的面向对象编程吗？一起来看看NI自带的例程：Evaporative Cooler（反馈式蒸发冷却器）是如何基于Actor Framework实现高质量代码设计的。（需要说明的是，AF属于Labview的高级框架，学习之前最好有一定的labview编程经验）">
 <meta name="keywords" content="Labview,Actor Framework">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Labview Actor Framework study: Evaporative Cooler">
+<meta property="og:title" content="Labview Actor Framework学习教程I：创建&#39;反馈式蒸发冷却器&#39;项目">
 <meta property="og:url" content="http://wanghongqing.com/2018/05/30/Labview-Actor-Framework-study-Evaporative-Cooler/index.html">
 <meta property="og:site_name" content="RELAX">
-<meta property="og:description" content="Actor Framework (AF) is launched by National Instrument in 2012, which is designed for the Objective Oriented Programming (OOP) in Labview. It is powerful and especially suitable for building large p">
+<meta property="og:description" content="想学习Labview的面向对象编程吗？一起来看看NI自带的例程：Evaporative Cooler（反馈式蒸发冷却器）是如何基于Actor Framework实现高质量代码设计的。（需要说明的是，AF属于Labview的高级框架，学习之前最好有一定的labview编程经验）">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://p930fjjjn.bkt.clouddn.com/labview%E5%BC%80%E5%A7%8B%E4%B8%8E%E7%BB%93%E6%9D%9F">
-<meta property="og:updated_time" content="2018-05-30T14:07:56.580Z">
+<meta property="og:image" content="http://p930fjjjn.bkt.clouddn.com/labview%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE.PNG">
+<meta property="og:image" content="http://p930fjjjn.bkt.clouddn.com/labview%E8%AE%BE%E7%BD%AE%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0%E4%B8%8E%E7%9B%AE%E5%BD%95.PNG">
+<meta property="og:image" content="http://p930fjjjn.bkt.clouddn.com/labview%E9%A1%B9%E7%9B%AE%E6%B5%8F%E8%A7%88%E5%99%A8.PNG">
+<meta property="og:image" content="http://p930fjjjn.bkt.clouddn.com/labview%E4%B8%BB%E7%A8%8B%E5%BA%8F.PNG">
+<meta property="og:updated_time" content="2018-06-10T13:28:19.560Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Labview Actor Framework study: Evaporative Cooler">
-<meta name="twitter:description" content="Actor Framework (AF) is launched by National Instrument in 2012, which is designed for the Objective Oriented Programming (OOP) in Labview. It is powerful and especially suitable for building large p">
+<meta name="twitter:title" content="Labview Actor Framework学习教程I：创建&#39;反馈式蒸发冷却器&#39;项目">
+<meta name="twitter:description" content="想学习Labview的面向对象编程吗？一起来看看NI自带的例程：Evaporative Cooler（反馈式蒸发冷却器）是如何基于Actor Framework实现高质量代码设计的。（需要说明的是，AF属于Labview的高级框架，学习之前最好有一定的labview编程经验）">
 <meta name="twitter:image" content="http://p930fjjjn.bkt.clouddn.com/labview%E5%BC%80%E5%A7%8B%E4%B8%8E%E7%BB%93%E6%9D%9F">
 
 
@@ -136,7 +140,7 @@
   };
 </script>
 
-  <title>Labview Actor Framework study: Evaporative Cooler | RELAX</title>
+  <title>Labview Actor Framework学习教程I：创建'反馈式蒸发冷却器'项目 | RELAX</title>
   
 
 
@@ -335,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Labview Actor Framework study: Evaporative Cooler
+          <h1 class="post-title" itemprop="name headline">Labview Actor Framework学习教程I：创建'反馈式蒸发冷却器'项目
               
             
           </h1>
@@ -360,12 +364,24 @@
                 
               
 
-              <time title="创建时间：2018-05-30 21:39:22 / 修改时间：22:07:56" itemprop="dateCreated datePublished" datetime="2018-05-30T21:39:22+08:00">2018-05-30</time>
+              <time title="创建时间：2018-05-30 21:39:22" itemprop="dateCreated datePublished" datetime="2018-05-30T21:39:22+08:00">2018-05-30</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-06-10 21:28:19" itemprop="dateModified" datetime="2018-06-10T21:28:19+08:00">2018-06-10</time>
               
             
           </span>
@@ -417,13 +433,17 @@
 
       
         <p><img src="http://p930fjjjn.bkt.clouddn.com/labview%E5%BC%80%E5%A7%8B%E4%B8%8E%E7%BB%93%E6%9D%9F" alt="" style="width:100%"></p>
-<p class="description">Actor Framework (AF) is launched by National Instrument in 2012, which is designed for the Objective Oriented Programming (OOP) in Labview. It is powerful and especially suitable for building large projects. Before AF launched, OOP is already existed in Labview, however, it’s extremely hard to use so that few people can handle it completely. AF creates an oppotunity to perform OOP in Labview quickly and simply. Here I will show you how to use the creative OOP framework based on the official template: Evaporative Cooler!</p>
+<p class="description">想学习Labview的面向对象编程吗？一起来看看NI自带的例程：Evaporative Cooler（反馈式蒸发冷却器）是如何基于Actor Framework实现高质量代码设计的。（需要说明的是，AF属于Labview的高级框架，学习之前最好有一定的labview编程经验）</p>
 
 <a id="more"></a>
 <hr>
-<p>##</p>
-<p>##</p>
-<p>##</p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><strong>Actor Framework (AF 操作者框架)</strong> 是美国National Instrument公司于2012年推出的一种Labview高级框架，基于<strong>Objective Oriented Programming (OOP 面向对象)</strong> 设计。这种框架非常适合用来设计大型复杂项目，在很大程度上解决了labview一直以来代码一复杂就变成“意大利面条”的窘境，真正实现了具备可调整(scalable)、模块化(modular)、可复用(reusable)、可扩展(extendable)、简单(simple)（简称smores）5大特性的高质量代码。</p>
+<h1 id="安装Labview"><a href="#安装Labview" class="headerlink" title="安装Labview"></a>安装Labview</h1><p>要学习AF，首先需要安装Labview，本文将以Labview 2015作为编译环境，大家可以在网上搜索并下载Labview 2015或者更高版本。需要注意的是近期NI发布了一个新版本Labview NXG与Labview 20xx系列并不通用，请勿选择NXG版。</p>
+<h1 id="创建”反馈式蒸发冷却器”"><a href="#创建”反馈式蒸发冷却器”" class="headerlink" title="创建”反馈式蒸发冷却器”"></a>创建”反馈式蒸发冷却器”</h1><ol>
+<li>打开Labview 2015，选择<code>创建项目-&gt;反馈式蒸发冷却器</code>，如图:<br><img src="http://p930fjjjn.bkt.clouddn.com/labview%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE.PNG" alt="创建项目-&gt;反馈式蒸发冷却器"></li>
+<li>下一步设置项目名称与目录：<br><img src="http://p930fjjjn.bkt.clouddn.com/labview%E8%AE%BE%E7%BD%AE%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0%E4%B8%8E%E7%9B%AE%E5%BD%95.PNG" alt="设置项目名称与目录"></li>
+<li>随后程序会自动完成创建，并进入项目浏览器：<br><img src="http://p930fjjjn.bkt.clouddn.com/labview%E9%A1%B9%E7%9B%AE%E6%B5%8F%E8%A7%88%E5%99%A8.PNG" alt="项目浏览器"><br>至此，项目创建完成。点击<code>Application-&gt;Application Launcher-&gt;Splash Screen</code>打开项目前面板，点击运行，进入项目主程序：<br><img src="http://p930fjjjn.bkt.clouddn.com/labview%E4%B8%BB%E7%A8%8B%E5%BA%8F.PNG" alt="主程序"><h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>下一节将介绍项目的整体运行思路。</li>
+</ol>
 <hr>
 
       
@@ -564,8 +584,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -657,6 +686,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Labview"><span class="nav-number">2.</span> <span class="nav-text">安装Labview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建”反馈式蒸发冷却器”"><span class="nav-number">3.</span> <span class="nav-text">创建”反馈式蒸发冷却器”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#未完待续"><span class="nav-number">4.</span> <span class="nav-text">未完待续</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
